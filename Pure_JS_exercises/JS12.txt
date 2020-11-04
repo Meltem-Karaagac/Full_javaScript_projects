@@ -1,0 +1,47 @@
+Basic JavaScript: Manipulate Arrays With push()
+An easy way to append data to the end of an array is via the push() function.
+
+.push() takes one or more parameters and "pushes" them onto the end of the array.
+
+Examples:
+
+var arr1 = [1,2,3];
+arr1.push(4);
+// arr1 is now [1,2,3,4]
+
+var arr2 = ["Stimpson", "J", "cat"];
+arr2.push(["happy", "joy"]);
+// arr2 now equals ["Stimpson", "J", "cat", ["happy", "joy"]]
+
+We have defined a function, mixedNumbers, which we are passing an array as an argument.
+ Modify the function by using push() and unshift() to add 'I', 2, 'three' to the beginning of the array and 7, 'VIII', 9 to the end
+ so that the returned array contains representations of the numbers 1-9 in order.
+
+function mixedNumbers(arr) {
+  arr.unshift("I",2,"three")
+  arr.push(7, "VIII", 9)
+  return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
+OUYPUT: [ 'I', 2, 'three', 'IV', 5, 'six', 7, 'VIII', 9 ]
+
+
+We have defined a function, popShift, which takes an array as an argument and returns a new array. 
+Modify the function, using pop() and shift(), to remove the first and last elements of the argument 
+array, and assign the removed elements to their corresponding variables, so that the returned array contains their values.
+
+function popShift(arr) {
+  let popped = arr.pop(); // Change this line
+  let shifted = arr.shift() // Change this line
+  return [shifted, popped];
+}
+
+console.log(popShift(['challenge', 'is', 'not', 'complete']));
+
+
+
+
+
+
+
