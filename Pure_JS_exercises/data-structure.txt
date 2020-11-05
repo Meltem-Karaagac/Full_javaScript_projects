@@ -1,0 +1,159 @@
+We've defined a function, checkInventory, which receives a scanned item as an argument. 
+Return the current value of the scannedItem key in the foods object. 
+You can assume that only valid keys will be provided as an argument to checkInventory.
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+function checkInventory(scannedItem) {
+  // Only change code below this line
+
+return foods[scannedItem]
+  // Only change code above this line
+}
+
+console.log(checkInventory("apples"));
+
+Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// Only change code below this line
+delete foods.oranges;
+delete foods.plums;
+delete foods.strawberries;
+// Only change code above this line
+
+console.log(foods);
+
+
+We've created an object, users, with some users in it and a function isEveryoneHere,
+ which we pass the users object to as an argument. Finish writing this function so that 
+it returns true only if the users object contains all four names, 
+Alan, Jeff, Sarah, and Ryan, as keys, and false otherwise.
+
+
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+if (
+    obj.hasOwnProperty("Alan") &&
+    obj.hasOwnProperty("Jeff") &&
+    obj.hasOwnProperty("Sarah") &&
+    obj.hasOwnProperty("Ryan")
+  ) {
+    return true;
+  }
+  return false;
+
+}
+
+console.log(isEveryoneHere(users));
+
+
+
+Finish writing the getArrayOfUsers function so that it returns an array containing all 
+the properties in the object it receives as an argument.
+
+
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  // Only change code below this line
+    return Object.keys(obj)
+  // Only change code above this line
+}
+
+console.log(getArrayOfUsers(users));
+
+
+
+
+
+
+Take a look at the object we've provided in the code editor. 
+The user object contains three keys. The data key contains five keys,
+ one of which contains an array of friends. From this, you can see how flexible 
+objects are as data structures. We've started writing a function addFriend.
+ Finish writing it so that it takes a user object and adds the name of the friend
+ argument to the array stored in user.data.friends and returns that array.
+
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+
+function addFriend(userObj, friend) {
+  // Only change code below this line
+userObj.data.friends.push(friend);
+return userObj.data.friends
+  // Only change code above this line
+}
+
+console.log(addFriend(user, 'Pete'));
+
+
+
